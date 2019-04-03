@@ -10,29 +10,29 @@ $res = $db->getResult();
 ?>
 
 <div class="row">
-    <table class="bordered">
-        <thead>
-            <tr>
-                <th data-field="kriteria">Kriteria</th>
-                <th data-field="bobot">Bobot</th>
-                <th data-field="trend">Trend</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
+    <div class="card-panel">
+        <table class="bordered">
+            <thead>
+                <tr>
+                    <th data-field="kriteria">Kriteria</th>
+                    <th data-field="bobot">Bobot</th>
+                    <th data-field="trend">Trend</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
             foreach ($res as $a) { ?>
-            <tr>
-                <td><?= $a['nama_kriteria'] ?></td>
-                <td><?= $a['bobot'] ?></td>
-                <td><?= $a['trend'] ?></td>
-            </tr>
-
-            <?php
-
+                <tr>
+                    <td><?= $a['nama_kriteria'] ?></td>
+                    <td><?= $a['bobot'] ?></td>
+                    <td><?= $a['trend'] ?></td>
+                </tr>
+                <?php
             }
-
             ?>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 <?php include_once("template/footer.php") ?>
