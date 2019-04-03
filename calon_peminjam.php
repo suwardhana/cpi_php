@@ -10,34 +10,33 @@ $res = $db->getResult();
 ?>
 
 <div class="row">
-    <div class="card-panel">
-        <table class="bordered">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Kontak</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $i=1;
+  <div class="card-panel">
+    <table class="bordered">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Kontak</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php $i=1;
             foreach ($res as $a) { ?>
-                <tr>
-                    <td><?= $i ?></td>
-                    <td><?= $a['nama'] ?></td>
-                    <td><?= $a['kontak'] ?></td>
-                    <td><a href="edit_calon.php?id=<?= $a['id_calon']?>" class="waves-effect waves-light btn">Edit</a>
-                        <a href="hapus_calon.php?id=<?= $a['id_calon']?>" class="waves-effect waves-light btn">hapus</a>
-                    </td>
-                </tr>
-                <?php
+        <tr>
+          <td><?= $i ?></td>
+          <td><?= $a['nama'] ?></td>
+          <td><?= $a['kontak'] ?></td>
+          <td><a href="hapus_calon.php?id=<?= $a['id_calon']?>" class="waves-effect waves-light btn">hapus</a>
+          </td>
+        </tr>
+        <?php
                 $i++;
             }
             ?>
-            </tbody>
-        </table>
-    </div>
+      </tbody>
+    </table>
+  </div>
 
 </div>
 <?php include_once("template/footer.php") ?>
