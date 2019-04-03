@@ -14,9 +14,10 @@ $res = $db->getResult();
         <table class="bordered">
             <thead>
                 <tr>
-                    <th data-field="kriteria">Kriteria</th>
-                    <th data-field="bobot">Bobot</th>
-                    <th data-field="trend">Trend</th>
+                    <th>Kriteria</th>
+                    <th>Bobot</th>
+                    <th>Trend</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +27,8 @@ $res = $db->getResult();
                     <td><?= $a['nama_kriteria'] ?></td>
                     <td><?= $a['bobot'] ?></td>
                     <td><?= $a['trend'] ?></td>
+                    <td><a href="edit_kriteria.php?id=<?= $a['id_kriteria']?>"
+                            class="waves-effect waves-light btn">Edit</a></td>
                 </tr>
                 <?php
             }
