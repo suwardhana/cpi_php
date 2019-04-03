@@ -1,5 +1,5 @@
 <?php
-include('class/mysql_crud.php');
+include('../class/mysql_crud.php');
 $db = new Database();
 $db->connect();
 $db->delete('CRUDClass','id=5');  // Table name, WHERE conditions

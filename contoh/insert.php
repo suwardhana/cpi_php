@@ -1,5 +1,5 @@
 <?php
-include('class/mysql_crud.php');
+include('../class/mysql_crud.php');
 $db = new Database();
 $db->connect();
 $data = $db->escapeString("name5@email.com"); // Escape any input before insert
