@@ -3,13 +3,13 @@
 <div class="row">
     <div class="card-panel">
         <h5>Tambah Data</h5>
-        <form action="save_peminjam.php">
+        <form action="save_peminjam.php" method="POST">
             <div class="input-field col s12 l6">
-                <input type="text" id="first_name" class="validate">
+                <input type="text" id="first_name" class="" required name="nama">
                 <label for="first_name">Nama</label>
             </div>
             <div class="input-field col s12 l6">
-                <input type="text" id="last_name" class="validate">
+                <input type="text" id="last_name" name="kontak">
                 <label for="last_name">Kontak</label>
             </div>
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
