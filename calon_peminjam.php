@@ -28,6 +28,7 @@ $res = $db->getResult();
                     <td><?= $a['nama'] ?></td>
                     <td><?= $a['kontak'] ?></td>
                     <td><a href="edit_calon.php?id=<?= $a['id_calon']?>" class="waves-effect waves-light btn">Edit</a>
+                        <a href="hapus_calon.php?id=<?= $a['id_calon']?>" class="waves-effect waves-light btn">hapus</a>
                     </td>
                 </tr>
                 <?php
