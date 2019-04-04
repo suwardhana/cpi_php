@@ -5,7 +5,7 @@
 include('class/mysql_crud.php');
 $db = new Database();
 $db->connect();
-$db->select('kriteria'); // Table name, Column Names, JOIN, WHERE conditions, ORDER BY conditions
+$db->select('kriteria');
 $res = $db->getResult();
 ?>
 
@@ -22,6 +22,7 @@ $res = $db->getResult();
       </thead>
       <tbody>
         <?php 
+        $totalbobot = 0;
             foreach ($res as $a) { ?>
         <tr>
           <td><?= $a['nama_kriteria'] ?></td>
@@ -30,8 +31,15 @@ $res = $db->getResult();
           <td><a href="edit_kriteria.php?id=<?= $a['id_kriteria']?>" class="waves-effect waves-light btn">Edit</a></td>
         </tr>
         <?php
-            }
+          $totalbobot += $a['bobot'];  
+          }
             ?>
+        <tr>
+          <td style="text-align:right">Total</td>
+          <td><?= $totalbobot?></td>
+          <td></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
   </div>
