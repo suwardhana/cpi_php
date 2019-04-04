@@ -12,6 +12,7 @@ $res = $db->getResult();
 <div class="row">
   <div class="card-panel">
     <h5>Data Calon Peminjam</h5>
+    <a href="tambah_peminjam.php" class="waves-effect waves-light btn">Tambah</a>
     <table class="bordered">
       <thead>
         <tr>
