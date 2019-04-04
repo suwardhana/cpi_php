@@ -129,5 +129,40 @@ $kriteria = $db->getResult();
     </table>
   </div>
 </div>
+<div class="row">
+  <div class="card-panel">
+    <h5>Composite Performance Index (CPI) <br> Tahap 3</h5>
+    <table class="bordered">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Total</th>
+          <th>Rank</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php 
+        $count = sizeof($sampel);
+        $ordered_values = $totalperrow;
+				rsort($ordered_values);
+        for($i=0;$i<$count;$i++){ 
+          foreach ($ordered_values as $ordered_key => $ordered_value) {
+            if ($totalperrow[$i] === $ordered_value) {
+              $key = $ordered_key;
+              break;
+            }
+          }
+          ?>
+        <tr>
+          <td><?= $sampel[$i]['nama']?></td>
+          <td><?= $totalperrow[$i]?></td>
+          <td><?php echo ((int) $key + 1);?></td>
+        </tr>
+        <?php
+        } ?>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <?php include_once("template/footer.php") ?>
