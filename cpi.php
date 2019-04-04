@@ -119,7 +119,7 @@ $kriteria = $db->getResult();
           } ?>
           </td>
           <?php 
-            $totalperrow[$i] = ($k1*$kriteria[0]['bobot'])+($k1*$kriteria[1]['bobot'])+($k1*$kriteria[2]['bobot'])+($k1*$kriteria[3]['bobot'])+($k1*$kriteria[4]['bobot']);
+            $totalperrow[$i] = ($k1*$kriteria[0]['bobot'])+($k2*$kriteria[1]['bobot'])+($k3*$kriteria[2]['bobot'])+($k4*$kriteria[3]['bobot'])+($k5*$kriteria[4]['bobot']);
           ?>
           <td><?= $totalperrow[$i] ?></td>
         </tr>
