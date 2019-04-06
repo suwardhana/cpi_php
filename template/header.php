@@ -14,7 +14,7 @@
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">DSS CPI</a>
+      <a href="index.html" class="brand-logo">DSS CPI</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="calon_peminjam.php">Calon Peminjam</a></li>
         <li><a href="kriteria.php">Kriteria</a></li>
